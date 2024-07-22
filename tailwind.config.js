@@ -6,7 +6,16 @@ export default {
         "./resources/**/*.vue",
     ],
     theme: {
-        extend: {},
+        extend: {
+            colors: {
+                black: "#333333",
+                blackSec: "#666666",
+                border: '#DADADA'
+            },
+            fontFamily: {
+                base: "Inter, sans-serif",
+            },
+        },
     },
     plugins: [],
 };
