@@ -6,6 +6,7 @@ use App\Models\Account;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
+
 class AccountController extends Controller
 {
     /**
@@ -45,12 +46,7 @@ class AccountController extends Controller
 
         return redirect('/login');
     }
-
-    // public function store(Request $request)
-    // {
-
-    // }
-
+  
     /**
      * Display the specified resource.
      */
