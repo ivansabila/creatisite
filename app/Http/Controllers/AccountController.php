@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Account;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+
 
 class AccountController extends Controller
 {
@@ -12,7 +14,9 @@ class AccountController extends Controller
      */
     public function index()
     {
-        //
+        return view('register', [
+            'title' => "Register",
+        ]);
     }
 
     /**
@@ -28,9 +32,21 @@ class AccountController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+        $validateData = $request->validate([
+            'username' => 'required|unique:accounts|min:3|max:255',
+            'email' => 'required|unique:accounts',
+            'password' => 'required|min:5|max:255'
+        ]);
 
+        $validateData['password'] = Hash::make($validateData['password']);
+
+        Account::create($validateData);
+
+        $request->session()->flash('success', 'Registration successfully');
+
+        return redirect('/login');
+    }
+  
     /**
      * Display the specified resource.
      */
