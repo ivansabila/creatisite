@@ -1,12 +1,20 @@
-@extends('partials.main')
-
-@section('content')
-@if (session()->has('success'))
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    @vite('resources/css/app.css')
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+    @if (session()->has('success'))
     <div class="border p-4 w-4/12 rounded-xl absolute left-1/2 top-12 -translate-x-1/2 bg-white items-center flex flex-row justify-between" id="flash">
         <div class="flex flex-row gap-5">
             <img class="h-8" src="{{ asset('assets/img/logo.png') }}" alt="">
             <div class="flex flex-col">
-                <p class="font-base text-black font-medium">{{ session('succesS') }}</p>
+                <p class="font-base text-black font-medium">{{ session('success') }}</p>
                 <p class="text-xs font-base text-blackSec">Welcome, you have become part of the creatizens</p>
             </div>
         </div>
@@ -27,7 +35,7 @@
 @endif
     <form action="" method="post">
         @csrf
-        <div class="flex gap-4 justify-center ">
+        <div class="flex gap-4 justify-center">
             <div class="flex flex-initial w-5/12 gap-12 flex-col items-center py-12 ">
                 <img class="w-8" src="{{ asset('assets/img/logo.png') }}" alt="">
                 <div class="content-hero flex flex-col gap-6 w-96">
@@ -67,4 +75,8 @@
         </div>
     </form>
     <script src="{{ asset('assets/js/flash.js') }}"></script>
-@endsection
+</body>
+</html>
+
+
+

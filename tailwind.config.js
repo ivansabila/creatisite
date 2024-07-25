@@ -10,10 +10,13 @@ export default {
             colors: {
                 black: "#333333",
                 blackSec: "#666666",
-                border: '#DADADA'
+                border: "#DADADA",
             },
             fontFamily: {
                 base: "Inter, sans-serif",
+            },
+            backgroundImage: {
+                iconSearch: "url('/public/assets/icons/search.png')",
             },
         },
     },

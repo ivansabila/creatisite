@@ -1,7 +1,15 @@
-@extends('partials.main')
-
-@section('content')
-{{-- @if (session()->has('success'))
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    @vite('resources/css/app.css')
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+    {{-- @if (session()->has('success'))
     <div class="border p-4 w-5/12 rounded-xl absolute left-1/2 top-12 -translate-x-1/2 bg-white items-center flex flex-row justify-between" id="flash">
         <div class="flex flex-row gap-5">
             <img class="h-8" src="{{ asset('assets/img/logo.png') }}" alt="">
@@ -70,4 +78,6 @@
     </form>
     <script src="{{ asset('assets/js/register.js') }}"></script>
     <script src="{{ asset('assets/js/flash.js') }}"></script>
-@endsection
+</body>
+</html>
+
